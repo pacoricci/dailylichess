@@ -1,0 +1,20 @@
+{
+    "require": {
+        "chesslablab/php-chess": "^1.3.41",
+        "monolog/monolog": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Controller\\": "app/Controller/",
+            "App\\Model\\": "app/Model/",
+            "App\\View\\": "app/View/",
+            "App\\Services\\": "app/services/",
+            "App\\Services\\Commands\\": "app/services/commands",
+            "Src\\Database\\": "src/Database/",
+            "Src\\Lichess\\": "src/Lichess/",
+            "Src\\Telegram\\": "src/Telegram/",
+            "Src\\Utils\\": "src/Utils/",
+            "Src\\Utils\\Logging\\": "src/Utils/Logging/"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS daily_puzzle(
+	daily_puzzle_id CHAR(5) COLLATE latin1_bin PRIMARY KEY NOT NULL,
+	day DATE NOT NULL,
+	pgn VARCHAR(512) NOT NULL,
+    rating SMALLINT UNSIGNED NOT NULL,
+    solution VARCHAR(128) NOT NULL,
+    time_stamp INT UNSIGNED NOT NULL,
+    color TINYINT UNSIGNED NOT NULL,
+    last_update INT UNSIGNED NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS lichess_db_puzzle(
+    PuzzleId CHAR(5) COLLATE latin1_bin PRIMARY KEY NOT NULL,
+    FEN VARCHAR(100) NOT NULL,
+    Moves VARCHAR(200) NOT NULL,
+    Rating SMALLINT UNSIGNED NOT NULL,
+    RatingDeviation SMALLINT UNSIGNED NOT NULL,
+    Popularity TINYINT NOT NULL,
+    NbPlays INT UNSIGNED NOT NULL,
+    Themes VARCHAR(200),
+    GameUrl VARCHAR(50) NOT NULL,
+    OpeningTags VARCHAR(100)
+  )
